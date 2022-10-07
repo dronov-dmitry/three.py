@@ -29,7 +29,7 @@ class TestSurfaceMaterials(Base):
 
         sphereGeom = SphereGeometry(radius=0.9)
         
-        gridTexture  = OpenGLUtils.initializeTexture("images/color-grid.png")
+        gridTexture  = OpenGLUtils.initializeTexture("three.py/images/color-grid.png")
         gridMaterial = SurfaceLightMaterial(texture=gridTexture)
 
         wireMaterial = SurfaceBasicMaterial(color=[0.8,0.8,0.8], wireframe=True, lineWidth=2)

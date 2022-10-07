@@ -44,7 +44,7 @@ class TestShadows(Base):
         self.scene.add( DirectionalLightHelper(directionalLight) )
         self.scene.add( OrthographicCameraHelper(directionalLight.shadowCamera) )
         
-        gridTexture  = OpenGLUtils.initializeTexture("images/color-grid.png")
+        gridTexture  = OpenGLUtils.initializeTexture("three.py/images/color-grid.png")
 
         geo = QuadGeometry(width=4,height=4)
         mat = SurfaceLightMaterial(texture=gridTexture)

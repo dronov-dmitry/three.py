@@ -35,21 +35,21 @@ class TestOBJGeometry(Base):
         self.floorMesh.transform.rotateX(-3.14/2, Matrix.LOCAL)
         self.scene.add(self.floorMesh)
         
-        mushroomTexture = OpenGLUtils.initializeTexture("models/mushroom.png")
-        self.mushroom = Mesh(OBJGeometry("models/mushroom.obj", smoothNormals=True),
+        mushroomTexture = OpenGLUtils.initializeTexture("three.py/models/mushroom.png")
+        self.mushroom = Mesh(OBJGeometry("three.py/models/mushroom.obj", smoothNormals=True),
                              SurfaceLightMaterial(texture=mushroomTexture))
         self.mushroom.transform.translate(-3,0,0)
         self.mushroom.transform.scaleUniform(0.8)
         self.scene.add(self.mushroom)
         
-        fireflowerTexture = OpenGLUtils.initializeTexture("models/fireflower.png")
-        self.fireflower = Mesh(OBJGeometry("models/fireflower.obj", smoothNormals=False),
+        fireflowerTexture = OpenGLUtils.initializeTexture("three.py/models/fireflower.png")
+        self.fireflower = Mesh(OBJGeometry("three.py/models/fireflower.obj", smoothNormals=False),
                                SurfaceLightMaterial(texture=fireflowerTexture))
         self.fireflower.transform.scaleUniform(0.0005)
         self.scene.add(self.fireflower)
         
-        starTexture = OpenGLUtils.initializeTexture("models/star.png")
-        self.star = Mesh(OBJGeometry("models/star.obj", smoothNormals=False),
+        starTexture = OpenGLUtils.initializeTexture("three.py/models/star.png")
+        self.star = Mesh(OBJGeometry("three.py/models/star.obj", smoothNormals=False),
                                SurfaceLightMaterial(texture=starTexture))
         self.star.transform.translate(3,0,0)
         self.star.transform.scaleUniform(0.0005)

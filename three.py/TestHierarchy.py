@@ -23,10 +23,10 @@ class TestHierarchy(Base):
         self.camera.transform.lookAt(0, 0, 0)
         self.cameraControls = FirstPersonController(self.input, self.camera)
         
-        starTexture  = OpenGLUtils.initializeTexture("images/stars.jpg")
-        sunTexture   = OpenGLUtils.initializeTexture("images/sun.jpg")
-        earthTexture = OpenGLUtils.initializeTexture("images/earth.jpg")
-        moonTexture  = OpenGLUtils.initializeTexture("images/moon.jpg")
+        starTexture  = OpenGLUtils.initializeTexture("three.py/images/stars.jpg")
+        sunTexture   = OpenGLUtils.initializeTexture("three.py/images/sun.jpg")
+        earthTexture = OpenGLUtils.initializeTexture("three.py/images/earth.jpg")
+        moonTexture  = OpenGLUtils.initializeTexture("three.py/images/moon.jpg")
 
         sphere = SphereGeometry()
         

@@ -27,8 +27,8 @@ class TestPostprocessing1(Base):
 
         self.renderTarget = RenderTarget.RenderTarget(1024,768)
         
-        crateTexture  = OpenGLUtils.initializeTexture("images/crate.jpg")
-        ballTexture  = OpenGLUtils.initializeTexture("images/basketball.png")
+        crateTexture  = OpenGLUtils.initializeTexture("three.py/images/crate.jpg")
+        ballTexture  = OpenGLUtils.initializeTexture("three.py/images/basketball.png")
         
         self.cube = Mesh( BoxGeometry(), SurfaceLightMaterial(texture=crateTexture) )
         self.cube.transform.translate(1.5, 0, 0, Matrix.LOCAL)        

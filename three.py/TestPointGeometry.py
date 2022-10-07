@@ -22,9 +22,9 @@ class TestPointGeometry(Base):
         self.camera = PerspectiveCamera()
         self.cameraControls = FirstPersonController(self.input, self.camera)
         
-        pointTexture  = OpenGLUtils.initializeTexture("images/particle-star.png")
+        pointTexture  = OpenGLUtils.initializeTexture("three.py/images/particle-star.png")
 
-        gridTexture  = OpenGLUtils.initializeTexture("images/color-grid.png")
+        gridTexture  = OpenGLUtils.initializeTexture("three.py/images/color-grid.png")
         gridMaterial = SurfaceBasicMaterial(texture=gridTexture)        
         floorMesh = Mesh( QuadGeometry(10,10,1,1), gridMaterial )
         floorMesh.transform.rotateX(-3.14/2, Matrix.LOCAL)

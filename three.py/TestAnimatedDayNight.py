@@ -25,11 +25,11 @@ class TestAnimatedDayNight(Base):
         self.camera.transform.setPosition(0, 0, 4)
         self.cameraControls = FirstPersonController(self.input, self.camera)
         
-        starTexture  = OpenGLUtils.initializeTexture("images/stars.jpg")      
+        starTexture  = OpenGLUtils.initializeTexture("three.py/images/stars.jpg")      
         stars = Mesh( SphereGeometry(200, 64,64), SurfaceBasicMaterial(texture=starTexture) )
         self.scene.add(stars)
 
-        sunTexture   = OpenGLUtils.initializeTexture("images/sun.jpg")
+        sunTexture   = OpenGLUtils.initializeTexture("three.py/images/sun.jpg")
         self.sun = Mesh( SphereGeometry(radius=0.25), SurfaceBasicMaterial(texture=sunTexture) )
         self.sun.transform.setPosition(2, 1.5, 0)
         self.scene.add(self.sun)
@@ -78,8 +78,8 @@ class TestAnimatedDayNight(Base):
         }
         """
 
-        dayTexture = OpenGLUtils.initializeTexture("images/earth-day.jpg")
-        nightTexture = OpenGLUtils.initializeTexture("images/earth-night.jpg")
+        dayTexture = OpenGLUtils.initializeTexture("three.py/images/earth-day.jpg")
+        nightTexture = OpenGLUtils.initializeTexture("three.py/images/earth-night.jpg")
         uniforms = [
             [ "sampler2D", "imageDay", dayTexture ],
             [ "sampler2D", "imageNight", nightTexture ],

@@ -28,7 +28,7 @@ class TestParticleEngine(Base):
         floorMesh.transform.rotateX(-3.14/2, Matrix.LOCAL)
         self.scene.add(floorMesh)
 
-        particleTexture = OpenGLUtils.initializeTexture("images/particle-star.png")
+        particleTexture = OpenGLUtils.initializeTexture("three.py/images/particle-star.png")
 
         # rainbow star fountain!
         self.engine = ParticleEngine(style="box",

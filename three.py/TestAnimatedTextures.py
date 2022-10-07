@@ -20,7 +20,7 @@ class TestAnimatedTextures(Base):
         self.camera.transform.setPosition(0, 0, 7)
         self.cameraControls = FirstPersonController(self.input, self.camera)
         
-        gridTexture  = OpenGLUtils.initializeTexture("images/color-grid.png")
+        gridTexture  = OpenGLUtils.initializeTexture("three.py/images/color-grid.png")
         lightMaterial = SurfaceBasicMaterial( color=[1,1,1], texture=gridTexture );
 
         distortVS = """
@@ -57,8 +57,8 @@ class TestAnimatedTextures(Base):
         }
         """
 
-        noiseTexture = OpenGLUtils.initializeTexture("images/cloud.png")
-        waterTexture = OpenGLUtils.initializeTexture("images/water.jpg")
+        noiseTexture = OpenGLUtils.initializeTexture("three.py/images/cloud.png")
+        waterTexture = OpenGLUtils.initializeTexture("three.py/images/water.jpg")
         waterUniforms = [
             [ "sampler2D", "image", waterTexture ],
             [ "sampler2D", "noise", noiseTexture ],

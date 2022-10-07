@@ -1,6 +1,7 @@
 from math import sin, cos
 
 from core import *
+import core
 from cameras import *
 from mathutils import *
 from geometry import *
@@ -28,13 +29,13 @@ class TestReflections(Base):
         self.time = 0
         self.cubePosition = self.translationFunction(self.time)
 
-        self.renderTarget = RenderTarget(1024,768)
+        self.renderTarget = core.RenderTarget(1024,768)
         self.firstReflectionCamera = PerspectiveCamera()
         self.firstReflectionCamera.transform.setPosition(self.cubePosition[0],self.cubePosition[1],
                                             self.cubePosition[2],Matrix.GLOBAL)
         self.firstReflectionCamera.transform.rotateY(3.14/2,Matrix.LOCAL)
 
-        starTexture  = OpenGLUtils.initializeTexture("images/skysphere.jpg")
+        starTexture  = OpenGLUtils.initializeTexture("three.py/images/skysphere.jpg")
         stars = Mesh( SphereGeometry(200, 64,64), SurfaceBasicMaterial(texture=starTexture) )
         self.scene.add(stars)
 

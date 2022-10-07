@@ -27,7 +27,7 @@ class JugglingPaths(Base):
         self.scene.add( AmbientLight(strength=0.25) )
         self.scene.add( DirectionalLight(direction=[-1,-1,-2]) )
 
-        starTexture  = OpenGLUtils.initializeTexture("images/stars.jpg")
+        starTexture  = OpenGLUtils.initializeTexture("three.py/images/stars.jpg")
         stars = Mesh( SphereGeometry(200, 64,64), SurfaceBasicMaterial(texture=starTexture) )
         self.scene.add(stars)
         

@@ -26,7 +26,7 @@ class TestSurfaceGeometry(Base):
         self.scene.add( AmbientLight(strength=0.25) )
         self.scene.add( DirectionalLight(direction=[-1,-1,-1]) )
         
-        gridTexture  = OpenGLUtils.initializeTexture("images/color-grid.png")
+        gridTexture  = OpenGLUtils.initializeTexture("three.py/images/color-grid.png")
         gridMaterial = SurfaceLightMaterial(texture=gridTexture)
 
         self.meshList = []

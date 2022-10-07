@@ -22,13 +22,13 @@ class TestSprites(Base):
         self.camera.transform.setPosition(0, 1, 5)
         self.cameraControls = FirstPersonController(self.input, self.camera)
 
-        gridTexture  = OpenGLUtils.initializeTexture("images/color-grid.png")
+        gridTexture  = OpenGLUtils.initializeTexture("three.py/images/color-grid.png")
         floorMesh = Mesh( QuadGeometry(width=10, height=10),
                           SurfaceBasicMaterial(texture=gridTexture))
         floorMesh.transform.rotateX(-3.14/2, Matrix.LOCAL)
         self.scene.add(floorMesh)
 
-        circleTexture  = OpenGLUtils.initializeTexture("images/circle-white.png")
+        circleTexture  = OpenGLUtils.initializeTexture("three.py/images/circle-white.png")
 
         self.spriteContainer = Object3D()
         self.spriteContainer.transform.translate(0,1.25,0)

@@ -21,7 +21,7 @@ class TestTransparentCube(Base):
         self.cameraControls = FirstPersonController(self.input, self.camera)
 
         # note: add meshes back-to-front
-        gridTexture  = OpenGLUtils.initializeTexture("images/color-grid.png")
+        gridTexture  = OpenGLUtils.initializeTexture("three.py/images/color-grid.png")
         gridMaterial = SurfaceBasicMaterial(texture=gridTexture)
 
         floorMesh = Mesh( QuadGeometry(10,10), gridMaterial )
@@ -29,11 +29,11 @@ class TestTransparentCube(Base):
 
         boxGeo = BoxGeometry(1,1,1)
         
-        textureOuter  = OpenGLUtils.initializeTexture("images/border-black.png")
+        textureOuter  = OpenGLUtils.initializeTexture("three.py/images/border-black.png")
         materialOuter = SurfaceBasicMaterial(texture=textureOuter)
         materialOuter.renderBack = False
 
-        textureInner  = OpenGLUtils.initializeTexture("images/border-dotted.png")
+        textureInner  = OpenGLUtils.initializeTexture("three.py/images/border-dotted.png")
         materialInner = SurfaceBasicMaterial(texture=textureInner)
         materialInner.renderFront = False
         

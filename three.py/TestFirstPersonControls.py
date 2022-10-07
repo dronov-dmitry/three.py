@@ -24,7 +24,7 @@ class TestFirstPersonControls(Base):
         self.cameraControls = FirstPersonController(self.input, self.camera)
         self.cameraControls.setSpeed(unitsPerSecond=0.5, degreesPerSecond=15)
 
-        skyTexture  = OpenGLUtils.initializeTexture("images/skysphere.jpg")
+        skyTexture  = OpenGLUtils.initializeTexture("three.py/images/skysphere.jpg")
         sky = Mesh( SphereGeometry(200, 64,64), SurfaceBasicMaterial(texture=skyTexture) )
         self.scene.add(sky)
         

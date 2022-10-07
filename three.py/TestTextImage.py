@@ -26,7 +26,7 @@ class TestTextImage(Base):
         self.scene.add( DirectionalLight(direction=[-1,-1,-1]) )
 
         messageImage = TextImage(text="Hello, World!",
-                                 fontFileName="fonts/Souses.otf", fontSize=36,
+                                 fontFileName="three.py/fonts/Souses.otf", fontSize=36,
                                  fontColor=[50,0,0], backgroundColor=[200,200,255],
                                  width=256, height=256,
                                  alignHorizontal="CENTER", alignVertical="MIDDLE")
@@ -40,7 +40,7 @@ class TestTextImage(Base):
         self.hudCamera = OrthographicCamera(left=0, right=600, bottom=0, top=600)
 
         hudImage = TextImage(text="This is a test of HUD text.",
-                          fontFileName="fonts/Souses.otf", fontSize=28,
+                          fontFileName="three.py/fonts/Souses.otf", fontSize=28,
                           transparent=True)
         hudTexture = OpenGLUtils.initializeSurface(hudImage.surface)
         quad = Sprite( SpriteMaterial( size=[hudImage.width, hudImage.height], anchor=[0,0], texture=hudTexture) )

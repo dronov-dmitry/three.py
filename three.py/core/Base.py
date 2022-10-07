@@ -13,7 +13,7 @@ class Base(object):
         pygame.font.init()
         
         # load a custom icon
-        pygame.display.set_icon(pygame.image.load("images/icon.png"))
+        pygame.display.set_icon(pygame.image.load("three.py/images/icon.png"))
         
         # initialize buffers to perform antialiasing
         pygame.display.gl_set_attribute(pygame.GL_MULTISAMPLEBUFFERS, 1)

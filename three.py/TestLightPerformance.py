@@ -34,7 +34,7 @@ class TestLightPerformance(Base):
         self.boxList = []
 
         boxGeo = BoxGeometry(width=1, height=1, depth=1)
-        boxTexture = OpenGLUtils.initializeTexture("images/color-grid.png")
+        boxTexture = OpenGLUtils.initializeTexture("three.py/images/color-grid.png")
         boxMat = SurfaceLightMaterial(texture=boxTexture)
 
         for i in range(100):            

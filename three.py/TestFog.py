@@ -31,7 +31,7 @@ class TestFog(Base):
         self.scene.add(floorMesh)
 
         boxGeo = BoxGeometry()
-        boxTexture = OpenGLUtils.initializeTexture("images/color-grid.png")
+        boxTexture = OpenGLUtils.initializeTexture("three.py/images/color-grid.png")
         boxMat = SurfaceBasicMaterial(texture=boxTexture)
 
         for i in range(100):            

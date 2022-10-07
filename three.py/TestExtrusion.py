@@ -31,7 +31,7 @@ class TestExtrusion(Base):
         material = SurfaceBasicMaterial()
         
         #geometry
-        geometry = OBJExtruder('models/TestTriangle.obj')
+        geometry = OBJExtruder('three.py/models/TestTriangle.obj')
 
         self.mesh = Mesh(geometry,material)
         self.scene.add(self.mesh)

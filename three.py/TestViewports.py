@@ -24,12 +24,12 @@ class TestViewports(Base):
         self.camera = PerspectiveCamera()
         self.camera.transform.setPosition(0, 0, 5)
         
-        starTexture  = OpenGLUtils.initializeTexture("images/stars.jpg")
+        starTexture  = OpenGLUtils.initializeTexture("three.py/images/stars.jpg")
         stars = Mesh( SphereGeometry(200, 64,64), SurfaceBasicMaterial(texture=starTexture) )
         self.scene.add(stars)
 
-        sunTexture   = OpenGLUtils.initializeTexture("images/sun.jpg")
-        earthTexture = OpenGLUtils.initializeTexture("images/earth.jpg")
+        sunTexture   = OpenGLUtils.initializeTexture("three.py/images/sun.jpg")
+        earthTexture = OpenGLUtils.initializeTexture("three.py/images/earth.jpg")
         
         self.sun = Mesh( SphereGeometry(), SurfaceBasicMaterial(texture=sunTexture) )
         self.scene.add(self.sun)
@@ -44,7 +44,7 @@ class TestViewports(Base):
         self.hudCamera = OrthographicCamera(left=0, right=self.w, bottom=0, top=self.h)
 
         hudImage = TextImage(text=" Front View           ",
-                          fontFileName="fonts/Souses.otf", fontSize=24,
+                          fontFileName="three.py/fonts/Souses.otf", fontSize=24,
                           fontColor=[255,255,255], transparent=True)
         hudTexture1 = OpenGLUtils.initializeSurface(hudImage.surface)
         self.quad1 = Sprite( SpriteMaterial( size=[hudImage.width, hudImage.height], anchor=[0,0], texture=hudTexture1) )

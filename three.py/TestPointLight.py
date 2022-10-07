@@ -25,7 +25,7 @@ class TestPointLight(Base):
         ambientLight = AmbientLight(color=[1,1,1], strength=0.25)
         self.scene.add( ambientLight )
 
-        moonTexture  = OpenGLUtils.initializeTexture("images/moon.jpg")
+        moonTexture  = OpenGLUtils.initializeTexture("three.py/images/moon.jpg")
         moon = Mesh( SphereGeometry(), SurfaceLightMaterial( color=[1,1,1], texture=moonTexture ) )
         self.scene.add(moon)        
 

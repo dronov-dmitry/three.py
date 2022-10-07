@@ -22,11 +22,11 @@ class TestRenderTarget(Base):
         self.camera.transform.lookAt(0, 0, 0)
         self.cameraControls = FirstPersonController(self.input, self.camera)
 
-        skyTexture  = OpenGLUtils.initializeTexture("images/skysphere.jpg")
+        skyTexture  = OpenGLUtils.initializeTexture("three.py/images/skysphere.jpg")
         sky = Mesh( SphereGeometry(200, 64,64), SurfaceBasicMaterial(texture=skyTexture) )
         self.scene.add(sky)
 
-        gridTexture = OpenGLUtils.initializeTexture("images/color-grid.png")
+        gridTexture = OpenGLUtils.initializeTexture("three.py/images/color-grid.png")
         self.sphere = Mesh( SphereGeometry(), SurfaceBasicMaterial(texture=gridTexture) )
         self.sphere.transform.setPosition(-1.2,0,0)
         self.scene.add(self.sphere)
